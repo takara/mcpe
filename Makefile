@@ -2,7 +2,8 @@ NAME=mcpe
 VERSION=latest
 DOCKER_RUN_OPTIONS= \
 	--privileged \
-	-p 19132:19132 \
-	-v `pwd`/worlds:/var/mcpe/worlds
+	-v `pwd`/players:/var/mcpe/players \
+	-v `pwd`/worlds:/var/mcpe/worlds \
+	-p 19132:19132 
 
 include docker.mk
